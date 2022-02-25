@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto';
+    scroll-behavior: smooth;
+}
+
+p{
+    font-size: 1.3rem;
+}
+.wrapper{
+    width: 100%;
+    max-width: 100%;
+}
+/* Animations */
+#loading{
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 50%;
+    left:48%;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.arrowBottom{
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    justify-self: center;
+}
+@keyframes jump{
+    from{
+        margin: 7vh;
+    }
+    to{
+        margin: 4vh;
+    }
+}
+menu{
+    background-color: black;
+    text-align: center;
+    height: 8vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+menu a {
+    color: white;
+    text-decoration: none;
+}
+menu a.on{
+    color: lightblue;
+}
+#home{
+    background-image: url(../imgs/fundo2.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: unset;
+    display: flex;
+    align-items: end ;
+    justify-content: center;
+}
+#apresentation{
+    background-color: #14279B;
+    color:white;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+#apresentation img{
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+#apresentation h1{
+    font-size: 3rem;
+}
+#apresentation p{
+    width:80%;
+}
+
+#experiences{
+    min-height: 100vh;
+    background: url(../imgs/fundo1.jpg) center no-repeat;
+    background-size: cover;
+}
+#experiences .slide{
+    display: grid;
+    height: 100%;
+    flex-direction: column;
+    align-content: space-evenly;
+}
+.experience{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    color:#14279B;
+}
+.experience .nameCompany{
+    font-size: 3rem;
+}
+.experience .time{
+    font-size: 1.5rem;
+}
+.experience .jobDescription{
+    font-size: 1.3rem;
+    width: 80%;
+    margin: auto;
+}
+.experience img{
+    border-radius: 50%;
+}
+.experience h1, .experience .time{
+    text-align: center;
+}
+#experiences .buttons{
+    align-self: center;
+    margin: 3vh auto;
+
+}
+#experiences .buttons button{
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw;
+    margin: auto 6px;
+    background-color: #14279B;
+    border: 2px solid #14279B;
+}
+#experiences .buttons button.activated{
+    opacity: 1;
+}
+#experiences .buttons button.disabled{
+    opacity: 0.5;
+}
+#education {
+    background-color: #3D56B2;
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+section.ofuscade{
+    filter: brightness(0.2);
+    
+}
+
+.botao-svg{
+    cursor: pointer;
+    
+}
+.botao-svg:hover{
+    transform:scale(1.01);
+    transition: all 0.5s;
+}
+.hide{
+    display: none;
+}
+.popup{
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    background: white;
+    width: 50vw;
+    height: 70vh;
+    padding-bottom: 2%;
+    display: grid;
+    grid-template: 0fr 0fr / 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    font-size: 2.5rem;
+    color: #14279B;
+    border-radius: 2%;
+}
+.popup .ano{
+    font-size: 7rem; 
+}
+.popup .lugar{
+    grid-column: 1/3;
+    align-self: start;
+}
+.popup .detalhes{
+    grid-column: 1/3;
+    align-self: start;
+}
+.popup svg{
+    position: absolute;
+    top: 2px;
+    right: 12px;
+    
+}
+
+.popup > *{
+    font-size: 2rem;
+}
+#skills{
+    display: flex;
+    min-height: 100vh;
+    background: url(../imgs/fundo1.jpg) center no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    
+}
+#contact{
+    min-height: 100vh;
+    background-color: #14279B;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
