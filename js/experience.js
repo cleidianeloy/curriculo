@@ -75,9 +75,11 @@ $(document).ready(()=>{
     var i = 0;
     for(var i = 0; i < qntExperiences; i++){
         var button = $('<button></button>');
+        button.attr('arial-label', 'experiência '+ i +1);
         button.attr('date', i);
         if(button.attr('date') === '0'){
             button.attr('class', 'activated');
+        
         }else{
             button.attr('class', 'disabled');
         }

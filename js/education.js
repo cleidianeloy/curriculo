@@ -1,4 +1,3 @@
-
 $(window).ready(()=>{
 
     $('.popup').each(function(){

@@ -66,6 +66,12 @@ menu a {
 menu a.on{
     color: lightblue;
 }
+#hamburguer{
+    float: right;
+    position: fixed;
+    top: -5;
+    right: 5;
+}
 #home{
     background-image: url(../imgs/fundo2.jpg);
     background-size: cover;
@@ -139,8 +145,8 @@ menu a.on{
 }
 #experiences .buttons button{
     border-radius: 50%;
-    width: 2vw;
-    height: 2vw;
+    width: 30px;
+    height: 30px;
     margin: auto 6px;
     background-color: #14279B;
     border: 2px solid #14279B;
@@ -230,4 +236,36 @@ section.ofuscade{
     display: grid;
     justify-items: center;
     align-items: center;
+}
+@media only screen and (max-width: 600px) {
+    menu {
+        height: 8vh;
+        width: 100vw;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: start;
+
+    }
+    menu a {
+        color: white;
+        text-decoration: none;
+        margin-left: 7vw;
+    }
+    menu.ativo{
+        height: 80vh;
+    }
+    #apresentation h1 {
+        font-size: 2rem;
+    }
+    #apresentation p {
+        padding: 0 0;
+        width: 100%;
+        margin:0;
+    }
+    #apresentation{
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    .experience {
+        grid-template-columns: 1fr;
+    }
 }
