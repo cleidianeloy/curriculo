@@ -66,11 +66,11 @@ menu a {
 menu a.on{
     color: lightblue;
 }
-#hamburguer{
+#hamburguer {
     float: right;
     position: fixed;
-    top: -5;
-    right: 5;
+    top: 5px;
+    right: 5px;
 }
 #home{
     background-image: url(../imgs/fundo2.jpg);
