@@ -178,6 +178,9 @@ section.ofuscade{
     transform:scale(1.01);
     transition: all 0.5s;
 }
+.botao-svg:after{
+    background-image: url("imgs/click.svg") ;
+}
 .hide{
     display: none;
 }
@@ -257,9 +260,9 @@ section.ofuscade{
         font-size: 2rem;
     }
     #apresentation p {
-        padding: 0 0;
-        width: 100%;
-        margin:0;
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
     }
     #apresentation{
         grid-template-columns: repeat(1, 1fr);
@@ -267,5 +270,23 @@ section.ofuscade{
     }
     .experience {
         grid-template-columns: 1fr;
+    }
+    .popup {
+        top: 15%;
+        left: 0%;
+        width: auto;
+        height: auto;
+        display: block;
+        font-size: 1.5rem;
+        margin: 2%;
+    }
+    .popup .ano {
+        font-size: 5rem;
+    }
+    .popup > * {
+        font-size: 1.8rem;
+        margin: 5vw auto;
+        text-align: center;
+        display: block;
     }
 }

@@ -29,28 +29,35 @@ var menuMobile = () =>{
 
         }
     })
-}
 
+}
+var vertical = () =>{
+    $('.horizontal').hide();
+    $('.vertical').show();
+}
+var horizontal = () => {
+    $('.vertical').hide();
+    $('.horizontal').show();
+}
 var menuDesktop = () =>{
     $('menu a').show();
     $('menu #hamburguer').hide();
 }
-$(document).ready(()=>{
+var isWhat = () =>{
     if(isMobile()){
         console.log('é mobile')
         menuMobile(); 
+        vertical();
     }else{
         console.log(' num é mobile')
         menuDesktop();
+        horizontal();
+       
     }
+}
+$(document).ready(()=>{
+    isWhat();
 })
 $(window).resize(function(){
-
-    if(isMobile()){
-        console.log('é mobile')
-        menuMobile(); 
-    }else{
-        console.log(' num é mobile')
-        menuDesktop();
-    }
+    isWhat();
 })
