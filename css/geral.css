@@ -45,7 +45,7 @@ p{
         margin: 4vh;
     }
 }
-menu{
+nav{
     background-color: black;
     text-align: center;
     height: 8vh;
@@ -59,11 +59,11 @@ menu{
     padding: 0;
     z-index: 3;
 }
-menu a {
+nav a {
     color: white;
     text-decoration: none;
 }
-menu a.on{
+nav a.on{
     color: lightblue;
 }
 #hamburguer {
@@ -184,7 +184,7 @@ section.ofuscade{
 .hide{
     display: none;
 }
-.popup{
+.popup {
     position: fixed;
     top: 15%;
     left: 25%;
@@ -193,13 +193,16 @@ section.ofuscade{
     height: 70vh;
     padding-bottom: 2%;
     display: grid;
-    grid-template: 0fr 0fr / 1fr 1fr;
+    grid-template: 0fr 0fr / 0fr 1fr;
     justify-items: center;
+    grid-column-gap: 2vw;
     align-items: center;
     align-content: center;
     font-size: 2.5rem;
     color: #14279B;
     border-radius: 2%;
+    padding: 2vw;
+    overflow: auto;
 }
 .popup .ano{
     font-size: 7rem; 
@@ -241,19 +244,19 @@ section.ofuscade{
     align-items: center;
 }
 @media only screen and (max-width: 600px) {
-    menu {
+    nav {
         height: 8vh;
         width: 100vw;
         grid-template-columns: repeat(1, 1fr);
         justify-items: start;
 
     }
-    menu a {
+    nav a {
         color: white;
         text-decoration: none;
         margin-left: 7vw;
     }
-    menu.ativo{
+    nav.ativo{
         height: 80vh;
     }
     #apresentation h1 {
